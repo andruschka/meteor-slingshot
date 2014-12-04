@@ -31,7 +31,7 @@ Slingshot.S3Storage = {
   },
 
   directiveDefault: _.chain(Meteor.settings)
-    .pick("AWSAccessKeyId", "AWSSecretAccessKey","protocol")
+    .pick("AWSAccessKeyId", "AWSSecretAccessKey", "protocol")
     .extend({
       bucket: Meteor.settings.S3Bucket,
       expire: 5 * 60 * 1000 //in 5 minutes

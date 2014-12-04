@@ -6,7 +6,7 @@ Slingshot.S3Storage = {
 
     AWSAccessKeyId: String,
     AWSSecretAccessKey: String,
-
+    protocol: String,
     acl: Match.Optional(Match.Where(function (acl) {
       check(acl, String);
 

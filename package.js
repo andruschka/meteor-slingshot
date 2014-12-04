@@ -1,7 +1,7 @@
 Package.describe({
   name: "andruschka:slingshot",
   summary: "Directly post files to cloud storage services, such as AWS-S3.",
-  version: "0.1.0",
+  version: "0.1.1",
   git: "https://github.com/andruschka/meteor-slingshot"
 });
 

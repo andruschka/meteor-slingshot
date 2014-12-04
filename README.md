@@ -2,6 +2,7 @@ meteor-slingshot
 ================
 
 Direct and secure file-uploads to AWS S3, Google Cloud Storage and others.
+Fork from edgee:slingshot -> customizable protocol ! (Use with own riakcs server etc...)
 
 ## Install
 
@@ -40,7 +41,7 @@ uploader.send(document.getElementById('input').files[0], function (error, downlo
 });
 ```
 
-### Server side
+### Server side (riakcs example)
 
 On the server we declare a directive that controls upload access rules:
 
@@ -48,7 +49,8 @@ On the server we declare a directive that controls upload access rules:
 Slingshot.createDirective("myFileUploads", Slingshot.S3Storage, {
   bucket: "mybucket",
   allowedFileTypes: ["image/png", "image/jpeg", "image/gif"],
-
+  protocol: "http"
+  domain: "riakcs.url.com"
   acl: "public-read",
 
   authorize: function () {

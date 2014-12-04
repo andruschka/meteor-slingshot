@@ -69,7 +69,7 @@ Slingshot.S3Storage = {
           "Content-Disposition": directive.contentDisposition
         },
         domain = {
-            protocol: "https",
+            protocol: directive.protocol || "https",
             host: directive.domain || directive.bucket + ".s3.amazonaws.com",
             pathname: payload.key
         };
